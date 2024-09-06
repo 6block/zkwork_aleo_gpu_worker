@@ -5,6 +5,9 @@ pool_address=aleo.hk.zk.work:10003
 
 ## Release-notes
 
+- aleo_prover v0.1.0
+  - Performance improvement, hashrate doubled compare to v0.0.2
+
 - aleo_prover v0.0.2
   - Slight performance improvement.
   - Deprecate complicated pool connection options `--tcp_server` and `--ssl_server`.
@@ -65,8 +68,8 @@ Oneline command to start:
 ### On Ubuntu
 
 1. Get an Aleo wallet address on [foxwallet](https://foxwallet.com/), [leowallet](https://www.leo.app/), [puzzle wallet](https://puzzle.online/) etc.
-2. Download zkwork miner with `wget https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.0.2/aleo_prover.tar.gz`.
-3. `tar -zvxf aleo_prover.tar.gz && cd aleo_prover`.
+2. Download zkwork miner with `wget https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.1.0/aleo_prover-v0.1.0.tar.gz`.
+3. `tar -zvxf aleo_prover-v0.1.0.tar.gz && cd aleo_prover`.
 4. Update your Aleo address in `run_prover.sh` and set custom name for mining server.
 5. Start mining with `sudo chmod +x run_prover.sh && ./run_prover.sh`.
 6. Check mining log with `tail -f prover.log`.
@@ -76,7 +79,7 @@ Oneline command to start:
 2. Add New Flight Sheet with config as follows.
 
 Configuration:
-- Installation URL: https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.0.2/aleo_prover.tar.gz
+- Installation URL: https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.1.0/aleo_prover-v0.1.0.tar.gz
 - Hash algorithm: aleo
 - Wallet and worker template: %WAL%
 - Pool URL:  aleo.hk.zk.work:10003
