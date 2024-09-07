@@ -86,3 +86,7 @@ Configuration:
 
 
 3. Start Flight Sheet
+
+
+## FAQ
+[English](./FAQ.md), [中文](./FAQ_zh.md)
