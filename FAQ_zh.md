@@ -26,6 +26,10 @@ A: 矿池根据矿机提交的 solution 来判断是否在线。如果矿机在 
 A: 目前 zk.work 每 3 小时向矿工支付一次奖励，直接打入启动挖矿软件时填写的 address。如果待支付金额不足 30 ALEO，将不会支付。相关参数可能会根据 Aleo 的 gas 情况随时调整。
 
 
+### Q: 矿池页面显示已打款，但是钱包内没有收到？
+A: 首先访问我们浏览器 [aleo.info](https://aleo.info/) 搜索收币地址，看是否已经打款。如果浏览器显示已打款，而钱包未收到的话，通常是因为钱包不支持Aleo主网。请使用支持Aleo主网的钱包，例如 [FoxWallet](https://foxwallet.com/)，导入同样的助记词后即可看到地址下的余额。
+
+
 ### Q: 挖矿软件接入鱼池时为何会遇到 “Authorized error” 报错？
 
 A: 通常是因为矿机的 IP 地理位置（如中国或美国）被鱼池屏蔽。可以尝试使用其他地区的代理，例如 [Svipminer](https://www.svipminer.com/) 提供的代理：`proxy.svipminer.com:3920`。
