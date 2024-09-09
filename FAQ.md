@@ -32,7 +32,7 @@ A: Mining pools determine if a machine is online based on whether it submits sol
 
 ### Q6: When are mining rewards paid?
 
-A: Currently, zk.work pays miners every 3 hours, with payments sent directly to the address entered when the mining software was started. If the amount to be paid is less than 30 ALEO, no payment will be made. These parameters may be adjusted based on Aleo's gas conditions.
+A: Currently, zk.work pays miners every 24 hours, with payments sent directly to the address entered when the mining software was started. If the amount to be paid is less than 3 ALEO, no payment will be made. These parameters may be adjusted based on Aleo's gas conditions.
 
 
 ### Q7: The mining pool page shows the payment has been made, but the wallet hasn't received it?
