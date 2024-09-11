@@ -25,26 +25,31 @@ A: 它们只是对于Aleo算力单位的不同称呼，但表示的意思是相�
 A: 可以访问我们浏览器 [aleo.info](https://aleo.info/) 的首页 24 Hour Data 栏目查看，目前单位算力收益为 3 ALEO/MH。
 
 
-### Q5: 矿机明明在运行，矿池的 dashboard 页面为何却显示为离线状态？
+### Q5: 挖矿软件启动后，多久可以在 zk.work 网页上看到算力？
+
+A: 首先等待日志中出现 “Found a solution”。其次在 zk.work 中搜索软件启动时填写的 `--address` 地址，即可看到算力。
+
+
+### Q6: 矿机明明在运行，矿池的 dashboard 页面为何却显示为离线状态？
 
 A: 矿池根据矿机提交的 solution 来判断是否在线。如果矿机在 10 分钟内未提交 solution，则会被判定为离线。这可能是由于矿机算力过低或与矿池的网络连接断开所致。
 
 
-### Q6: 挖矿奖励何时打款？
+### Q7: 挖矿奖励何时打款？
 
 A: 目前 zk.work 每 24 小时向矿工支付一次奖励，直接打入启动挖矿软件时填写的 address。如果待支付金额不足 3 ALEO，将不会支付。相关参数可能会根据 Aleo 的 gas 情况随时调整。
 
 
-### Q7: 矿池页面显示已打款，但是钱包内没有收到？
+### Q8: 矿池页面显示已打款，但是钱包内没有收到？
 
 A: 首先访问我们浏览器 [aleo.info](https://aleo.info/) 搜索收币地址，看是否已经打款。如果浏览器显示已打款，而钱包未收到的话，通常是因为钱包不支持Aleo主网。请使用支持Aleo主网的钱包，例如 [FoxWallet](https://foxwallet.com/)，导入同样的助记词后即可看到地址下的余额。
 
 
-### Q8: 为什么我的 ”pool fee rate“ 不是 1%？
+### Q9: 为什么我的 ”pool fee rate“ 不是 1%？
 
 A: zk.work 对大客户矿工提供了定制化的软件服务，并且收取不同的 pool fee rate。出现这种情况是由于使用了大客户的服务所致，如需继续使用请联系 [6BlockBD](https://t.me/sixblockofficial)。
 
 
-### Q9: 挖矿软件接入鱼池时为何会遇到 “Authorized error” 报错？
+### Q10: 挖矿软件接入鱼池时为何会遇到 “Authorized error” 报错？
 
 A: 通常是因为矿机的 IP 地理位置（如中国或美国）被鱼池屏蔽。可以尝试使用其他地区的代理，例如 [Svipminer](https://www.svipminer.com/) 提供的代理：`proxy.svipminer.com:3920`。
