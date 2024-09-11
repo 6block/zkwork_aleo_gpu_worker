@@ -25,26 +25,31 @@ A: They are just different names for the Aleo computing power unit, but they rep
 A: You can check the homepage of our explorer [aleo.info](https://aleo.info/) under the "24 Hour Data" section. Currently, the reward per unit of hashrate is 3 ALEO/MH.
 
 
-### Q5: Why does the mining pool’s dashboard show my machine as inactive even though it’s running?
+### Q5: How long does it take to see my hashrate on zk.work after launching the mining software?
+
+A: First, wait for the log to display "Found a solution." Then, search for the `--address` you provided on zk.work, and you will be able to see the hashrate.
+
+
+### Q6: Why does the mining pool’s dashboard show my machine as inactive even though it’s running?
 
 A: Mining pools determine if a machine is online based on whether it submits solutions. If a machine doesn’t submit a solution within 10 minutes, it is considered offline. This could be due to low hashrate or a broken network connection to the pool.
 
 
-### Q6: When are mining rewards paid?
+### Q7: When are mining rewards paid?
 
 A: Currently, zk.work pays miners every 24 hours, with payments sent directly to the address entered when the mining software was started. If the amount to be paid is less than 3 ALEO, no payment will be made. These parameters may be adjusted based on Aleo's gas conditions.
 
 
-### Q7: The mining pool page shows the payment has been made, but the wallet hasn't received it?
+### Q8: The mining pool page shows the payment has been made, but the wallet hasn't received it?
 
 A: First, visit our explorer [aleo.info](https://aleo.info/) and search for the receiving address to check if the payment has been made. If the explorer shows the payment has been made but the wallet hasn't received it, it is usually because the wallet does not support the Aleo mainnet. Please use a wallet that supports the Aleo mainnet, such as [FoxWallet](https://foxwallet.com/), and import the same mnemonic to see the balance under the address.
 
 
-### Q8: Why is my "pool fee rate" not 1%?
+### Q9: Why is my "pool fee rate" not 1%?
 
 A: zk.work offers customized software services to large-client miners, which come with different pool fee rates. This situation occurs due to the use of services for large clients. If you wish to continue using them, please contact [6BlockBD](https://t.me/sixblockofficial).
 
 
-### Q9: Why do I encounter an "Authorized error" when connecting mining software to F2Pool?
+### Q10: Why do I encounter an "Authorized error" when connecting mining software to F2Pool?
 
 A: This usually happens because the miner’s IP location (e.g., China or the United States) is blocked by F2Pool. You can try using a proxy from a different region, such as the one provided by [Svipminer](https://www.svipminer.com/): `proxy.svipminer.com:3920`.
