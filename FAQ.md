@@ -35,21 +35,30 @@ A: First, wait for the log to display "Found a solution." Then, search for the `
 A: Mining pools determine if a machine is online based on whether it submits solutions. If a machine doesn’t submit a solution within 10 minutes, it is considered offline. This could be due to low hashrate or a broken network connection to the pool.
 
 
-### Q7: When are mining rewards paid?
+### Q7: Why is the hashrate in the miner log different from that on the website?
+
+A: The hashrate in the miner log represents the number of solutions calculated by the miner per second, while the hashrate shown by the mining pool is an estimate based on the number of solutions submitted by the miner over a given time.
+
+For example, if a miner calculates 100 solutions per second, the miner log will display a hashrate of 100. According to the current difficulty, theoretically, 10 out of 100 solutions should meet the difficulty requirement. However, sometimes, due to luck, 20 solutions may meet the requirement and get submitted to the mining pool, and other times, none might meet the requirement. In those cases, the mining pool would show a hashrate of 200 and 0, respectively.
+
+Additionally, rewards are distributed based on the mining pool's data. The ratio between the pool data and the log data is often referred to as the Luck.
+
+
+### Q8: When are mining rewards paid?
 
 A: Currently, zk.work pays miners every 24 hours, with payments sent directly to the address entered when the mining software was started. If the amount to be paid is less than 3 ALEO, no payment will be made. These parameters may be adjusted based on Aleo's gas conditions.
 
 
-### Q8: The mining pool page shows the payment has been made, but the wallet hasn't received it?
+### Q9: The mining pool page shows the payment has been made, but the wallet hasn't received it?
 
 A: First, visit our explorer [aleo.info](https://aleo.info/) and search for the receiving address to check if the payment has been made. If the explorer shows the payment has been made but the wallet hasn't received it, it is usually because the wallet does not support the Aleo mainnet. Please use a wallet that supports the Aleo mainnet, such as [FoxWallet](https://foxwallet.com/), and import the same mnemonic to see the balance under the address.
 
 
-### Q9: Why is my "pool fee rate" not 1%?
+### Q10: Why is my "pool fee rate" not 1%?
 
 A: zk.work offers customized software services to large-client miners, which come with different pool fee rates. This situation occurs due to the use of services for large clients. If you wish to continue using them, please contact [6BlockBD](https://t.me/sixblockofficial).
 
 
-### Q10: Why do I encounter an "Authorized error" when connecting mining software to F2Pool?
+### Q11: Why do I encounter an "Authorized error" when connecting mining software to F2Pool?
 
 A: This usually happens because the miner’s IP location (e.g., China or the United States) is blocked by F2Pool. You can try using a proxy from a different region, such as the one provided by [Svipminer](https://www.svipminer.com/): `proxy.svipminer.com:3920`.
