@@ -1,11 +1,9 @@
-# server list
-pool=aleo.hk.zk.work:10003
+#!/bin/bash
 
-# use your own aleo reward_address
-reward_address=aleo1xxx...
+pids=$(ps -ef | grep inner_prover | grep -v grep | awk '{print $2}')
+if [ -n "$pids" ]; then
+    echo "$pids" | xargs kill
+    sleep 5
+fi
 
-# set your own custom name
-custom_name="zkwork_worker"
-
-ps -ef|grep prover|awk '{print $2}'|xargs kill
-nohup ./aleo_prover --address $reward_address --pool $pool --custom_name $custom_name >> prover.log 2>&1 &
+nohup ./inner_prover.sh >> prover.log 2>&1 &

@@ -6,6 +6,19 @@ pool_address=aleo.asia1.zk.work:10003
 
 ## Release-notes
 
+- aleo_prover v0.1.2-pre
+  - 20%+ performance improvement than v0.1.2-stable
+  - Longer warmup time than v0.1.2-stable
+  - Invalid share issue still under development with <1% chance of occurrence
+  - Recommended for CPU with more than 16 cores
+
+- aleo_prover v0.1.2-stable
+  - Completely solve CPU usage on old CPUs, compatible with any CPUs since this version
+  - Fix segment fault issue in some epochs
+  - Fix invalid share issue in some epochs
+  - Network reconnection improvemnt, remove unnecessary warmup after reconnection which brings higher mining performance
+  - Recommended for CPU with less than 16 cores
+
 - aleo_prover v0.1.1-hot/v0.1.0-hot
   - Lower CPU usage
   - Lower GPU memory usage
@@ -79,8 +92,8 @@ Oneline command to start:
 ### On Ubuntu
 
 1. Get an Aleo wallet address on [foxwallet](https://foxwallet.com/), [leowallet](https://www.leo.app/), [puzzle wallet](https://puzzle.online/) etc.
-2. Download zkwork miner with `wget https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.1.1-hot/aleo_prover-v0.1.1_hot.tar.gz`.
-3. `tar -zvxf aleo_prover-v0.1.1_hot.tar.gz && cd aleo_prover`.
+2. Download zkwork miner with `wget https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.1.2/aleo_prover-v0.1.2_pre.tar.gz`.
+3. `tar -zvxf aleo_prover-v0.1.2_pre.tar.gz && cd aleo_prover`.
 4. Update your Aleo address in `run_prover.sh` and set custom name for mining server.
 5. Start mining with `sudo chmod +x run_prover.sh && ./run_prover.sh`.
 6. Check mining log with `tail -f prover.log`.
@@ -90,7 +103,7 @@ Oneline command to start:
 2. Add New Flight Sheet with config as follows.
 
 Configuration:
-- Installation URL: https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.1.1-hot/aleo_prover-v0.1.1_hot.tar.gz
+- Installation URL: https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.1.2/aleo_prover-v0.1.2_pre.tar.gz
 - Hash algorithm: aleo
 - Wallet and worker template: %WAL%
 - Pool URL:  aleo.hk.zk.work:10003
