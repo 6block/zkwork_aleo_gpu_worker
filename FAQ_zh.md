@@ -61,3 +61,9 @@ A: zk.work 对大客户矿工提供了定制化的软件服务，并且收取不
 ### Q11: 挖矿软件接入鱼池时为何会遇到 “Authorized error” 报错？
 
 A: 通常是因为矿机的 IP 地理位置（如中国或美国）被鱼池屏蔽。可以尝试使用其他地区的代理，例如 [Svipminer](https://www.svipminer.com/) 提供的代理：`proxy.svipminer.com:3920`。
+
+
+### Q12: 为什么高性能版（pre/boost）挖矿软件对CPU有要求？
+
+A: Aleo在每个epoch都需要进行不同的运算（详见Q2），所以可以在epoch开始时将挖矿软件预热调试至最适合当前epoch的状态。这个预热过程要借助CPU，且在完成预热前GPU算力都比较低。CPU太弱会造成预热时间过长甚至无法完成预热，影响整体挖矿性能。
+预热开始的日志是`Notify from Pool Server, job_id`，表示从矿池接收了新的epoch任务；结束的日志是`Kernel is ready for new job`，表示已经完成预热。

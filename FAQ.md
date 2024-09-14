@@ -62,3 +62,10 @@ A: zk.work offers customized software services to large-client miners, which com
 ### Q11: Why do I encounter an "Authorized error" when connecting mining software to F2Pool?
 
 A: This usually happens because the miner’s IP location (e.g., China or the United States) is blocked by F2Pool. You can try using a proxy from a different region, such as the one provided by [Svipminer](https://www.svipminer.com/): `proxy.svipminer.com:3920`.
+
+
+### Q12: Why does the high-performance version (pre/boost) have CPU requirements?
+
+A: Aleo requires different computations for each epoch (see Q2 for details), so the mining software can be pre-warmed and tuned to the optimal state for the current epoch at the start of each epoch. This pre-warming process relies on the CPU, and during this time, GPU hashrate remains relatively low. If the CPU is too weak, it may lead to an excessively long or incomplete pre-warming process, which negatively impacts overall mining performance.
+The log entry for the start of pre-warming is `Notify from Pool Server, job_id`, indicating that a new epoch task has been received from the mining pool. The log entry `Kernel is ready for new job` signals that pre-warming has been completed.
+
