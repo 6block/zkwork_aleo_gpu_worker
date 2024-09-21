@@ -70,3 +70,7 @@ A: This usually happens because the miner’s IP location (e.g., China or the Un
 A: Aleo requires different computations for each epoch (see Q2 for details), so the mining software can be pre-warmed and tuned to the optimal state for the current epoch at the start of each epoch. This pre-warming process relies on the CPU, and during this time, GPU hashrate remains relatively low. If the CPU is too weak, it may lead to an excessively long or incomplete pre-warming process, which negatively impacts overall mining performance.
 The log entry for the start of pre-warming is `Notify from Pool Server, job_id`, indicating that a new epoch task has been received from the mining pool. The log entry `Kernel is ready for new job` signals that pre-warming has been completed.
 
+
+### Q13: How to resolve the "version `GLIBC_2.29' not found" error?
+A：You can solve this by upgrading HiveOS to the latest version or by installing libc6 with the following command: 
+`apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install libc6 -y`
