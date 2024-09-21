@@ -1,6 +1,6 @@
 ### Q1: What is the download link for Aleo mining software?
 
-A: The GitHhub links for downloading the latest software are:
+A: The GitHub links for downloading the latest software are:
 - To connect to the zk.work pool: [zkwork_aleo_gpu_worker](https://github.com/6block/zkwork_aleo_gpu_worker/releases)
 - To connect to the f2pool pool: [f2pool_prover](https://github.com/6block/f2pool_prover/releases)
 - If the mining rig network cannot connect to GitHub, you can try using a GitHub file proxy, such as by concatenating the following download link through [ghp.ci](https://ghp.ci/): [https://ghp.ci/https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.0/aleo_prover-v0.2.0.tar.gz](https://ghp.ci/https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.0/aleo_prover-v0.2.0.tar.gz)
