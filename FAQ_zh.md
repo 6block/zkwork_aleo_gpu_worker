@@ -71,5 +71,15 @@ A: Aleo在每个epoch都需要进行不同的运算（详见Q2），所以可以
 
 
 ### Q13：如何解决 “version `GLIBC_2.29' not found” 报错？
-A：可以将 HiveOS 升级到最新版本来解决，或通过以下命令安装 libc6：
-`apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install libc6 -y`
+A：可以将 HiveOS 升级到最新版本来解决，或通过以下命令安装 libc6
+```
+apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install libc6 -y
+```
+
+
+### Q14：如何解决 “Failed find valid proof target in range” 报错？
+A：社区反馈可以通过以下命令重装各种依赖来解决，目前未能查明导致这一报错的原因
+```
+apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install tmux -y && apt install libc6 -y
+grep -qxF "deb http://cz.archive.ubuntu.com/ubuntu jammy main" /etc/apt/sources.list || echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" | sudo tee -a /etc/apt/sources.list && sudo apt update && sudo apt install -y  libssl3 libssl-dev g++-11 libc6
+```
