@@ -2,6 +2,7 @@
 ```shell
 pool_address=aleo.hk.zk.work:10003
 pool_address=aleo.asia1.zk.work:10003
+pool_address=aleo.jp.zk.work:10003
 ```
 
 ## Release-notes
@@ -110,7 +111,7 @@ Options:
 ## Mining Tutorial
 
 Oneline command to start:
-`./aleo_prover --pool aleo.hk.zk.work:10003 --address aleoxxx --custom_name myprover`
+`./aleo_prover --pool aleo.aisa1.zk.work:10003 --pool aleo.hk.zk.work:10003 --pool aleo.jp.zk.work:10003 --address aleoxxx --custom_name myprover`
 
 ### On Ubuntu
 
