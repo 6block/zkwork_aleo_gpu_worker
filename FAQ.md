@@ -84,3 +84,14 @@ A: The community suggests reinstalling various dependencies using the following 
 apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install tmux -y && apt install libc6 -y
 grep -qxF "deb http://cz.archive.ubuntu.com/ubuntu jammy main" /etc/apt/sources.list || echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" | sudo tee -a /etc/apt/sources.list && sudo apt update && sudo apt install -y  libssl3 libssl-dev g++-11 libc6
 ```
+
+
+### Q15: Why is the profit per hashrate decreasing every day?
+
+A: The miner's profit page displays the average hashrate and profit every day, and their ratio (profit divided by average hashrate, in ALEO/MH) changes daily. Reasonable ratios can be referenced on the following pages (note that they are all estimated values):
+
+1. The right side of the [zk.work Aleo page](https://zk.work/aleo/) shows the profit per hashrate over the past 24 hours for the mining pool.
+2. The right side of the [aleo.info homepage](https://aleo.info/) shows the profit per hashrate for the entire network over the past 24 hours.
+3. The [Aleoscan calculator](https://aleoscan.io/calc) shows the current profit per hashrate.
+
+The ratio calculated on the profit page, plus the pool fee, should be close to the values displayed on these three pages. Therefore, even with the same hashrate, daily profit fluctuates.
