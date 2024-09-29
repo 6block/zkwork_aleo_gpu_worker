@@ -83,3 +83,13 @@ A：社区反馈可以通过以下命令重装各种依赖来解决，目前未�
 apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install tmux -y && apt install libc6 -y
 grep -qxF "deb http://cz.archive.ubuntu.com/ubuntu jammy main" /etc/apt/sources.list || echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" | sudo tee -a /etc/apt/sources.list && sudo apt update && sudo apt install -y  libssl3 libssl-dev g++-11 libc6
 ```
+
+
+### Q15: 为什么我单位算力收益每天在变少？
+
+A: 在矿工的 利润/profit 页面会显示矿工每天的平均算力和收益，其比值（收益除以平均算力，单位是ALEO/MH）是每天变化的。其合理的比值可以参考以下页面：
+1. [zk.work的Aleo矿池页面](https://zk.work/aleo/)的右侧，表示矿池过去24h的单位算力收益。
+2. [aleo.info首页](https://aleo.info/)的右侧，表示全网过去24h的单位算力收益。
+3. [Aleoscan的计算器](https://aleoscan.io/calc)，表示当前时刻的单位算力收益。
+
+在 利润/profit 页面算出的比值加上pool fee应该和这三个页面显示的数值相接近。所以即使算力相同，每天的收益也在不断的变化。
