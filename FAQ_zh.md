@@ -87,7 +87,7 @@ grep -qxF "deb http://cz.archive.ubuntu.com/ubuntu jammy main" /etc/apt/sources.
 
 ### Q15: 为什么我单位算力收益每天在变少？
 
-A: 在矿工的 利润/profit 页面会显示矿工每天的平均算力和收益，其比值（收益除以平均算力，单位是ALEO/MH）是每天变化的。其合理的比值可以参考以下页面：
+A: 在矿工的 利润/profit 页面会显示矿工每天的平均算力和收益，其比值（收益除以平均算力，单位是ALEO/MH）是每天变化的。其合理的比值可以参考以下页面（注意它们都是估算值）：
 1. [zk.work的Aleo矿池页面](https://zk.work/aleo/)的右侧，表示矿池过去24h的单位算力收益。
 2. [aleo.info首页](https://aleo.info/)的右侧，表示全网过去24h的单位算力收益。
 3. [Aleoscan的计算器](https://aleoscan.io/calc)，表示当前时刻的单位算力收益。
