@@ -2,8 +2,7 @@
 
 A: 下载最新软件的GitHub地址：
 - 连接zk.work矿池：[zkwork_aleo_gpu_worker](https://github.com/6block/zkwork_aleo_gpu_worker/releases)
-- 连接f2pool矿池：[f2pool_prover](https://github.com/6block/f2pool_prover/releases)
-- 如果矿机网络无法连接GitHub，可以尝试使用GitHub文件代理，例如通过 [ghp.ci](https://ghp.ci/) 拼接出如下下载链接：[https://ghp.ci/https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.0/aleo_prover-v0.2.0.tar.gz](https://ghp.ci/https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.0/aleo_prover-v0.2.0.tar.gz)
+- 如果矿机网络无法连接GitHub，可以尝试使用GitHub文件代理，例如通过 [ghp.ci](https://ghp.ci/) 拼接出如下下载链接：[https://ghp.ci/https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.3/aleo_prover-v0.2.3_full.tar.gz](https://ghp.ci/https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.3/aleo_prover-v0.2.3_full.tar.gz)
 
 并建议关注我们的 [Twitter](https://x.com/ZKWorkHQ) 和 [Discord](https://discord.com/invite/pKufwyjGFF) 以接收新版本的消息推送。
 
