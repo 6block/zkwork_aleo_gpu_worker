@@ -1,7 +1,7 @@
 ### Q1: What is the download link for Aleo mining software?
 
-A: The GitHub links for downloading the latest software are:
-- To connect to the zk.work pool: [zkwork_aleo_gpu_worker](https://github.com/6block/zkwork_aleo_gpu_worker/releases)
+A: As follows:
+- GitHub download page: [zkwork_aleo_gpu_worker](https://github.com/6block/zkwork_aleo_gpu_worker/releases)
 - If the mining rig network cannot connect to GitHub, you can try using a GitHub file proxy, such as by concatenating the following download link through [ghp.ci](https://ghp.ci/): [https://ghp.ci/https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.3/aleo_prover-v0.2.3_full.tar.gz](https://ghp.ci/https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.3/aleo_prover-v0.2.3_full.tar.gz)
 
 We also recommend following our [Twitter](https://x.com/ZKWorkHQ) and [Discord](https://discord.com/invite/pKufwyjGFF) for updates on new versions.
@@ -46,7 +46,9 @@ Additionally, rewards are distributed based on the mining pool's data. The ratio
 
 ### Q8: When are mining rewards paid?
 
-A: Currently, zk.work pays miners every 24 hours, with payments sent directly to the address entered when the mining software was started. If the amount to be paid is less than 3 ALEO, no payment will be made. These parameters may be adjusted based on Aleo's gas conditions.
+A: Currently, zk.work pays miners every 24 hours, with payments sent directly to the address entered when the mining software was started. If the amount to be paid is less than 3 ALEO, no payment will be made. 
+Every day at UTC +0 0:00 / UTC +8 8:00 AM the profits for the past 24 hours are settled, and then the payout queue starts at UTC +0 1:00 AM / UTC +8 9:00 AM. Payouts are usually completed within 3 hours.
+These parameters may be adjusted based on Aleo's gas conditions.
 
 
 ### Q9: The mining pool page shows the payment has been made, but the wallet hasn't received it?
@@ -78,7 +80,7 @@ apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy
 
 
 ### Q14: How to resolve the "Failed to find valid proof target in range" error?
-A: The community suggests reinstalling various dependencies using the following command to resolve this error, although the cause of this error has not yet been identified.
+A: Some community members reported that the error was caused by overclocking, and simply disabling overclocking resolves it. Others reported that reinstalling various dependencies using the following commands can fix the error. The exact cause of this error has not yet been identified.
 ```
 apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install tmux -y && apt install libc6 -y
 grep -qxF "deb http://cz.archive.ubuntu.com/ubuntu jammy main" /etc/apt/sources.list || echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" | sudo tee -a /etc/apt/sources.list && sudo apt update && sudo apt install -y  libssl3 libssl-dev g++-11 libc6
@@ -91,6 +93,7 @@ A: The miner's profit page displays the average hashrate and profit every day, a
 
 1. The right side of the [zk.work Aleo page](https://zk.work/aleo/) shows the profit per hashrate over the past 24 hours for the mining pool.
 2. The right side of the [aleo.info homepage](https://aleo.info/) shows the profit per hashrate for the entire network over the past 24 hours.
-3. The [Aleoscan calculator](https://aleoscan.io/calc) shows the current profit per hashrate.
+3. The Mining Profit chat at [aleo.info charts page](https://aleo.info/charts) shows everyday profit per hashrate in history.
+4. The [Aleoscan calculator](https://aleoscan.io/calc) shows the current profit per hashrate.
 
 The ratio calculated on the profit page, plus the pool fee, should be close to the values displayed on these three pages. Therefore, even with the same hashrate, daily profit fluctuates.
