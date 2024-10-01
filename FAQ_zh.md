@@ -1,9 +1,8 @@
 ### Q1: Aleo挖矿软件的下载地址是什么？
 
-A: 下载最新软件的GitHub地址：
-- 连接zk.work矿池：[zkwork_aleo_gpu_worker](https://github.com/6block/zkwork_aleo_gpu_worker/releases)
-- 连接f2pool矿池：[f2pool_prover](https://github.com/6block/f2pool_prover/releases)
-- 如果矿机网络无法连接GitHub，可以尝试使用GitHub文件代理，例如通过 [ghp.ci](https://ghp.ci/) 拼接出如下下载链接：[https://ghp.ci/https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.0/aleo_prover-v0.2.0.tar.gz](https://ghp.ci/https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.0/aleo_prover-v0.2.0.tar.gz)
+A: 如下：
+- Github下载页：[zkwork_aleo_gpu_worker](https://github.com/6block/zkwork_aleo_gpu_worker/releases)
+- 如果矿机网络无法连接GitHub，可以尝试使用GitHub文件代理，例如通过 [ghp.ci](https://ghp.ci/) 拼接出如下下载链接：[https://ghp.ci/https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.3/aleo_prover-v0.2.3_full.tar.gz](https://ghp.ci/https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.3/aleo_prover-v0.2.3_full.tar.gz)
 
 并建议关注我们的 [Twitter](https://x.com/ZKWorkHQ) 和 [Discord](https://discord.com/invite/pKufwyjGFF) 以接收新版本的消息推送。
 
@@ -46,7 +45,9 @@ A: 矿机日志中的算力表示矿机每秒计算 solution 的个数，矿池�
 
 ### Q8: 挖矿奖励何时打款？
 
-A: 目前 zk.work 每 24 小时向矿工支付一次奖励，直接打入启动挖矿软件时填写的 address。如果待支付金额不足 3 ALEO，将不会支付。相关参数可能会根据 Aleo 的 gas 情况随时调整。
+A: 目前 zk.work 每 24 小时向矿工支付一次奖励，直接打入启动挖矿软件时填写的 address。如果待支付金额不足 3 ALEO，将不会支付。
+每日 UTC +0 0:00 / UTC +8 8:00 AM 对过去24h的收益进行结算，然后从 UTC +0 1:00 AM / UTC +8 9:00 AM 开始排队支付收益。通常会在3小时内完成支付。
+相关参数可能会根据 Aleo 的 gas 情况随时调整。
 
 
 ### Q9: 矿池页面显示已打款，但是钱包内没有收到？
@@ -59,37 +60,33 @@ A: 首先访问我们浏览器 [aleo.info](https://aleo.info/) 搜索收币地�
 A: zk.work 对大客户矿工提供了定制化的软件服务，并且收取不同的 pool fee rate。出现这种情况是由于使用了大客户的服务所致，如需继续使用请联系 [6BlockBD](https://t.me/sixblockofficial)。
 
 
-### Q11: 挖矿软件接入鱼池时为何会遇到 “Authorized error” 报错？
-
-A: 通常是因为矿机的 IP 地理位置（如中国或美国）被鱼池屏蔽。可以尝试使用其他地区的代理，例如 [Svipminer](https://www.svipminer.com/) 提供的代理：`proxy.svipminer.com:3920`。
-
-
-### Q12: 为什么高性能版（pre/boost）挖矿软件对CPU有要求？
+### Q11: 为什么高性能版（pre/boost）挖矿软件对CPU有要求？
 
 A: Aleo在每个epoch都需要进行不同的运算（详见Q2），所以可以在epoch开始时将挖矿软件预热调试至最适合当前epoch的状态。这个预热过程要借助CPU，且在完成预热前GPU算力都比较低。CPU太弱会造成预热时间过长甚至无法完成预热，影响整体挖矿性能。
 预热开始的日志是`Notify from Pool Server, job_id`，表示从矿池接收了新的epoch任务；结束的日志是`Kernel is ready for new job`，表示已经完成预热。
 
 
-### Q13：如何解决 “version `GLIBC_2.29' not found” 报错？
+### Q12：如何解决 “version `GLIBC_2.29' not found” 报错？
 A：可以将 HiveOS 升级到最新版本来解决，或通过以下命令安装 libc6
 ```
 apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install libc6 -y
 ```
 
 
-### Q14：如何解决 “Failed find valid proof target in range” 报错？
-A：社区反馈可以通过以下命令重装各种依赖来解决，目前未能查明导致这一报错的原因
+### Q13：如何解决 “Failed find valid proof target in range” 报错？
+A：部分社区成员反馈是由于设置了超频导致，只要关闭超频即可解决。另一部分反馈可以通过以下命令重装各种依赖来解决。目前未能查明导致这一报错的详细原因
 ```
 apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install tmux -y && apt install libc6 -y
 grep -qxF "deb http://cz.archive.ubuntu.com/ubuntu jammy main" /etc/apt/sources.list || echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" | sudo tee -a /etc/apt/sources.list && sudo apt update && sudo apt install -y  libssl3 libssl-dev g++-11 libc6
 ```
 
 
-### Q15: 为什么我单位算力收益每天在变少？
+### Q14: 为什么我单位算力收益每天在变少？
 
 A: 在矿工的 利润/profit 页面会显示矿工每天的平均算力和收益，其比值（收益除以平均算力，单位是ALEO/MH）是每天变化的。其合理的比值可以参考以下页面（注意它们都是估算值）：
 1. [zk.work的Aleo矿池页面](https://zk.work/aleo/)的右侧，表示矿池过去24h的单位算力收益。
 2. [aleo.info首页](https://aleo.info/)的右侧，表示全网过去24h的单位算力收益。
-3. [Aleoscan的计算器](https://aleoscan.io/calc)，表示当前时刻的单位算力收益。
+3. [aleo.info charts页面](https://aleo.info/charts)的Mining Profit图表，展示了历史上每天的单位算力收益。
+4. [Aleoscan的计算器](https://aleoscan.io/calc)，表示当前时刻的单位算力收益。
 
-在 利润/profit 页面算出的比值加上pool fee应该和这三个页面显示的数值相接近。所以即使算力相同，每天的收益也在不断的变化。
+矿工的 `收益 ÷ 平均算力 ÷ (1 - pool_fee_rate)` 应该和这三个页面显示的数值相接近。所以即使算力相同，每天的收益也在不断的变化。
