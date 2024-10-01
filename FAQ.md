@@ -61,25 +61,20 @@ A: First, visit our explorer [aleo.info](https://aleo.info/) and search for the 
 A: zk.work offers customized software services to large-client miners, which come with different pool fee rates. This situation occurs due to the use of services for large clients. If you wish to continue using them, please contact [6BlockBD](https://t.me/sixblockofficial).
 
 
-### Q11: Why do I encounter an "Authorized error" when connecting mining software to F2Pool?
-
-A: This usually happens because the miner’s IP location (e.g., China or the United States) is blocked by F2Pool. You can try using a proxy from a different region, such as the one provided by [Svipminer](https://www.svipminer.com/): `proxy.svipminer.com:3920`.
-
-
-### Q12: Why does the high-performance version (pre/boost) have CPU requirements?
+### Q11: Why does the high-performance version (pre/boost) have CPU requirements?
 
 A: Aleo requires different computations for each epoch (see Q2 for details), so the mining software can be pre-warmed and tuned to the optimal state for the current epoch at the start of each epoch. This pre-warming process relies on the CPU, and during this time, GPU hashrate remains relatively low. If the CPU is too weak, it may lead to an excessively long or incomplete pre-warming process, which negatively impacts overall mining performance.
 The log entry for the start of pre-warming is `Notify from Pool Server, job_id`, indicating that a new epoch task has been received from the mining pool. The log entry `Kernel is ready for new job` signals that pre-warming has been completed.
 
 
-### Q13: How to resolve the "version `GLIBC_2.29' not found" error?
+### Q12: How to resolve the "version `GLIBC_2.29' not found" error?
 A：You can solve this by upgrading HiveOS to the latest version or by installing libc6 with the following command: 
 ```
 apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install libc6 -y
 ```
 
 
-### Q14: How to resolve the "Failed to find valid proof target in range" error?
+### Q13: How to resolve the "Failed to find valid proof target in range" error?
 A: Some community members reported that the error was caused by overclocking, and simply disabling overclocking resolves it. Others reported that reinstalling various dependencies using the following commands can fix the error. The exact cause of this error has not yet been identified.
 ```
 apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install tmux -y && apt install libc6 -y
@@ -87,7 +82,7 @@ grep -qxF "deb http://cz.archive.ubuntu.com/ubuntu jammy main" /etc/apt/sources.
 ```
 
 
-### Q15: Why is the profit per hashrate decreasing every day?
+### Q14: Why is the profit per hashrate decreasing every day?
 
 A: The miner's profit page displays the average hashrate and profit every day, and their ratio (profit divided by average hashrate, in ALEO/MH) changes daily. Reasonable ratios can be referenced on the following pages (note that they are all estimated values):
 
@@ -96,4 +91,4 @@ A: The miner's profit page displays the average hashrate and profit every day, a
 3. The Mining Profit chat at [aleo.info charts page](https://aleo.info/charts) shows everyday profit per hashrate in history.
 4. The [Aleoscan calculator](https://aleoscan.io/calc) shows the current profit per hashrate.
 
-The ratio calculated on the profit page, plus the pool fee, should be close to the values displayed on these three pages. Therefore, even with the same hashrate, daily profit fluctuates.
+Miner's `profit ÷ average_hashrate ÷ (1 - pool_fee_rate)` should be close to the values displayed on these three pages. Therefore, even with the same hashrate, daily profit fluctuates.
