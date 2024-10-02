@@ -47,8 +47,12 @@ Additionally, rewards are distributed based on the mining pool's data. The ratio
 ### Q8: When are mining rewards paid?
 
 A: Currently, zk.work pays miners every 24 hours, with payments sent directly to the address entered when the mining software was started. If the amount to be paid is less than 3 ALEO, no payment will be made. 
-Every day at UTC +0 0:00 / UTC +8 8:00 AM the profits for the past 24 hours are settled, and then the payout queue starts at UTC +0 1:00 AM / UTC +8 9:00 AM. Payouts are usually completed within 3 hours.
-These parameters may be adjusted based on Aleo's gas conditions.
+
+Every day at 0:00 UTC+0 / 8:00 AM UTC+8 the profits for the past 24 hours are settled, and then the payout queue starts at 1:00 AM UTC+0 / 9:00 AM UTC+8. Payouts are usually completed within 3 hours.
+
+Sometimes the payout transaction cannot be found in the explorer, which is usually because the Aleo network dropped the transaction. This is a known bug acknowledged by Aleo, and you can search for 'ghost transactions' in the Aleo Discord. In such cases, we usually start resending at 8:00 AM UTC / 4:00 PM UTC+8.
+
+Note that these parameters may be adjusted based on Aleo's network conditions.
 
 
 ### Q9: The mining pool page shows the payment has been made, but the wallet hasn't received it?
