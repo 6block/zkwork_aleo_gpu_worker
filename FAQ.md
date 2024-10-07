@@ -88,11 +88,11 @@ grep -qxF "deb http://cz.archive.ubuntu.com/ubuntu jammy main" /etc/apt/sources.
 
 ### Q14: Why is the profit per hashrate decreasing every day?
 
-A: The miner's profit page displays the average hashrate and profit every day, and their ratio (profit divided by average hashrate, in ALEO/MH) changes daily. Reasonable ratios can be referenced on the following pages (note that they are all estimated values):
+A: On the miner's profit page, the average hashrate and profit of the past 24 hours from the daily settlement time (0:00 UTC+0) are displayed, and their ratio (profit divided by average hashrate, in ALEO/MH) changes daily. Reasonable ratios can be referenced on the following pages (note that they are all estimated values):
 
-1. The right side of the [zk.work Aleo page](https://zk.work/aleo/) shows the profit per hashrate over the past 24 hours for the mining pool.
-2. The right side of the [aleo.info homepage](https://aleo.info/) shows the profit per hashrate for the entire network over the past 24 hours.
-3. The Mining Profit chat at [aleo.info charts page](https://aleo.info/charts) shows everyday profit per hashrate in history.
-4. The [Aleoscan calculator](https://aleoscan.io/calc) shows the current profit per hashrate.
+1. The right side of the [zk.work Aleo page](https://zk.work/aleo/) shows the profit per hashrate of the past 24 hours from the last settlement time for the mining pool.
+2. The right side of the [aleo.info homepage](https://aleo.info/) shows the profit per hashrate of the past 24 hours from now for the entire network.
+3. The Mining Profit chat at [aleo.info charts page](https://aleo.info/charts) shows the profit per hashrate of past 24 hours from the daily settlement time in history.
+4. The [Aleoscan calculator](https://aleoscan.io/calc) shows the estimated profit per hashrate at the current moment.
 
 Miner's `profit ÷ average_hashrate ÷ (1 - pool_fee_rate)` should be close to the values displayed on these three pages. Therefore, even with the same hashrate, daily profit fluctuates.
