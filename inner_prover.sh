@@ -1,6 +1,3 @@
-# server list
-pool=aleo.hk.zk.work:10003
-
 # use your own aleo reward_address
 reward_address=aleo1xxx...
 
@@ -16,7 +13,7 @@ fi
 while true; do
     target=`ps aux | grep aleo_prover | grep -v grep`
     if [ -z "$target" ]; then
-        ./aleo_prover --address $reward_address --pool $pool --custom_name $custom_name
+        ./aleo_prover --address $reward_address --pool aleo.asia1.zk.work:10003 --pool aleo.hk.zk.work:10003 --pool aleo.jp.zk.work:10003 --custom_name $custom_name
         sleep 5
     fi
     sleep 60
