@@ -9,10 +9,8 @@ cd `dirname $0`
 . aleo_prover.conf
 
 echo "ADDRESS = "$ADDRESS
-echo "POOL = "$POOL
 echo "WORKER_NAME = "$WORKER_NAME
 echo "CUSTOM_USER_CONFIG = "$CUSTOM_USER_CONFIG
-
 echo "CUSTOM_NAME = "$CUSTOM_NAME
 echo "CUSTOM_VERSION = "$CUSTOM_VERSION
 echo "CUSTOM_LOG_BASEDIR = "$CUSTOM_LOG_BASEDIR
@@ -26,13 +24,7 @@ echo "CUSTOM_CONFIG_FILENAME = "$CUSTOM_CONFIG_FILENAME
 
 [[ ! -d $CUSTOM_LOG_BASEDIR ]] && mkdir -p $CUSTOM_LOG_BASEDIR
 
-POOLS=""
-
-for i in $POOL; do
-    POOLS+="--pool $i "
-done
-
 if gpu-detect list; then
     echo "GPU Detected"
-    ./aleo_prover --address $ADDRESS $POOLS --custom_name $WORKER_NAME $CUSTOM_USER_CONFIG 2>&1 | tee ${CUSTOM_LOG_BASENAME}.log
+    ./aleo_prover --address $ADDRESS --pool aleo.asia1.zk.work:10003 --pool aleo.hk.zk.work:10003 --pool aleo.jp.zk.work:10003 $CUSTOM_USER_CONFIG 2>&1 | tee ${CUSTOM_LOG_BASENAME}.log
 fi
