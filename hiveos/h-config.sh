@@ -9,14 +9,6 @@ fi
 
 conf+="\n"
 
-if [[ ! -z $CUSTOM_URL ]]; then
-    CUSTOM_URL=$(echo "$CUSTOM_URL" | tr '\n' ' ')
-    POOL=($CUSTOM_URL)
-    conf+="POOL=\"${POOL[@]}\""
-fi
-
-conf+="\n"
-
 if [[ ! -z $WORKER_NAME ]]; then
     conf+="WORKER_NAME="
     conf+=$WORKER_NAME
@@ -56,6 +48,9 @@ if [[ ! -z $CUSTOM_USER_CONFIG ]]; then
         fi
     done <<< "$CUSTOM_USER_CONFIG"
     USER_CONFIG=$(echo "$USER_CONFIG" | tr '\n' ' ' | sed 's/[[:space:]]*$//')
+    if [[ "$USER_CONFIG" != *"--custom_name"* ]]; then
+        USER_CONFIG="$USER_CONFIG --custom_name $WORKER_NAME"
+    fi
     conf+="CUSTOM_USER_CONFIG=\""
     conf+="$USER_CONFIG\""
 fi
