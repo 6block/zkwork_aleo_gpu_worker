@@ -47,13 +47,15 @@ if [[ ! -z $CUSTOM_USER_CONFIG ]]; then
             USER_CONFIG+="$line"$'\n'
         fi
     done <<< "$CUSTOM_USER_CONFIG"
-    USER_CONFIG=$(echo "$USER_CONFIG" | tr '\n' ' ' | sed 's/[[:space:]]*$//')
-    if [[ "$USER_CONFIG" != *"--custom_name"* ]]; then
-        USER_CONFIG="$USER_CONFIG --custom_name $WORKER_NAME"
-    fi
-    conf+="CUSTOM_USER_CONFIG=\""
-    conf+="$USER_CONFIG\""
 fi
+
+USER_CONFIG=$(echo "$USER_CONFIG" | tr '\n' ' ' | sed 's/[[:space:]]*$//')
+if [[ "$USER_CONFIG" != *"--custom_name"* ]]; then
+    USER_CONFIG="$USER_CONFIG --custom_name $WORKER_NAME"
+fi
+
+conf+="CUSTOM_USER_CONFIG=\""
+conf+="$USER_CONFIG\""
 
 conf+="\n"
 
