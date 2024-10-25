@@ -135,18 +135,25 @@ Oneline command to start:
 ### On Ubuntu
 
 1. Get an Aleo wallet address on [foxwallet](https://foxwallet.com/), [leowallet](https://www.leo.app/), [puzzle wallet](https://puzzle.online/) etc.
-2. Download zkwork miner with `wget https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.3-fix/aleo_prover-v0.2.3_full_fix.tar.gz`.
-3. `tar -zvxf aleo_prover-v0.2.3-fix_full_fix.tar.gz && cd aleo_prover`.
-4. Update your Aleo address in `inner_prover.sh` and set custom name for mining server.
-5. Start mining with `sudo chmod +x run_prover.sh && ./run_prover.sh`.
-6. Check mining log with `tail -f prover.log`.
+2. Download zkwork Nvidia miner: `wget https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.3-fix/aleo_prover-v0.2.3_full_fix.tar.gz`.
+3. Download zkwork AMD miner: `wget https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/ocl-v0.2.4/aleo_prover-v0.2.4_ocl.tar.gz`.
+4. On Nvidia: `tar -zvxf aleo_prover-v0.2.3-fix_full_fix.tar.gz && cd aleo_prover`, on AMD: `tar -zvxf aleo_prover-v0.2.4_ocl.tar.gz && cd aleo_prover`.
+5. Update your Aleo address in `inner_prover.sh` and set custom name for mining server.
+6. Start mining with `sudo chmod +x run_prover.sh && ./run_prover.sh`.
+7. Check mining log with `tail -f prover.log`.
 
 ### On HiveOS 
-1. Get an Aleo wallet address on foxwallet, leowallet, puzzle wallet etc.
-2. Add New Flight Sheet with config as follows.
+1. Choose your download url for your gpu.
+  ```
+  DOWNLOAD_URL for Nvidia: https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.3-fix/aleo_prover-v0.2.3_full_fix.tar.gz
+  DOWNLOAD_URL for AMD: https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/ocl-v0.2.4/aleo_prover-v0.2.4_ocl.tar.gz
+  ```
+2. Get an Aleo wallet address on foxwallet, leowallet, puzzle wallet etc.
+3. Add New Flight Sheet with config as follows.
+
 
 Configuration:
-- Installation URL: https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.3-fix/aleo_prover-v0.2.3_full_fix.tar.gz
+- Installation URL: DOWNLOAD_URL
 - Hash algorithm: aleo
 - Wallet and worker template: %WAL%
 
