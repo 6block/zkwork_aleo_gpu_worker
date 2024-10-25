@@ -5,7 +5,15 @@ pool_address=aleo.asia1.zk.work:10003
 pool_address=aleo.jp.zk.work:10003
 ```
 
+## Latest version
+
+- Nvidia: [v0.2.3](https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/v0.2.3-fix/aleo_prover-v0.2.3_full_fix.tar.gz)
+- AMD: [v0.2.4](https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/ocl-v0.2.4/aleo_prover-v0.2.4_ocl.tar.gz)
+
 ## Release-notes
+
+- aleo_prover ocl-v0.2.4
+  - The first release version for AMD GPUs
 
 - aleo_prover v0.2.3-fix
   - Improve mining dashboard on HiveOS
