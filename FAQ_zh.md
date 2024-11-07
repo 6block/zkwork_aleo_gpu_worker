@@ -71,7 +71,13 @@ A: Aleo在每个epoch都需要进行不同的运算（详见Q2），所以可以
 
 
 ### Q12：如何解决 “version `GLIBC_2.29' not found” 报错？
-A：可以将 HiveOS 升级到最新版本来解决，或通过以下命令安装 libc6
+A：可以在以下3种方案中任选其一来解决
+1. 将 HiveOS 升级到最新版本
+2. 在 HiveOS 上使用以下命令
+```
+hive-replace --stable -y
+```
+3. 通过以下命令安装 libc6
 ```
 apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install libc6 -y
 ```
