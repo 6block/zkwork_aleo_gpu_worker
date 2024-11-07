@@ -72,7 +72,13 @@ The log entry for the start of pre-warming is `Notify from Pool Server, job_id`,
 
 
 ### Q12: How to resolve the "version `GLIBC_2.29' not found" error?
-A：You can solve this by upgrading HiveOS to the latest version or by installing libc6 with the following command: 
+A: You can choose one of the following three solutions to resolve the issue:
+1. Upgrade HiveOS to the latest version.
+2. Use the following command on HiveOS.
+```
+hive-replace --stable -y
+```
+3. Install libc6 with the following command: 
 ```
 apt update && apt upgrade && echo "deb http://cz.archive.ubuntu.com/ubuntu jammy main" >> /etc/apt/sources.list && apt update && apt install libc6 -y
 ```
