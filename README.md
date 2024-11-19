@@ -7,10 +7,13 @@ pool_address=aleo.jp.zk.work:10003
 
 ## Latest version
 
-- Nvidia: [v0.2.5](https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/cuda-v0.2.5/aleo_prover-v0.2.5_cuda_full.tar.gz)
+- Nvidia: [v0.2.5-hotfix](https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/cuda-v0.2.5-hotfix/aleo_prover-v0.2.5_cuda_full_hotfix.tar.gz)
 - AMD: [v0.2.4](https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/ocl-v0.2.4/aleo_prover-v0.2.4_ocl.tar.gz)
 
 ## Release-notes
+
+- aleo_prover cuda-v0.2.5-hotfix
+  - Fix issues on some GPUs in cuda-v0.2.5 version
 
 - aleo_prover cuda-v0.2.5
   - 6%+ performance improvement on RTX3080/4090 etc
@@ -142,9 +145,9 @@ Oneline command to start:
 ### On Ubuntu
 
 1. Get an Aleo wallet address on [foxwallet](https://foxwallet.com/), [leowallet](https://www.leo.app/), [puzzle wallet](https://puzzle.online/) etc.
-2. Download zkwork Nvidia miner: `wget https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/cuda-v0.2.5/aleo_prover-v0.2.5_cuda_full.tar.gz`.
+2. Download zkwork Nvidia miner: `wget https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/cuda-v0.2.5-hotfix/aleo_prover-v0.2.5_cuda_full_hotfix.tar.gz`.
 3. Download zkwork AMD miner: `wget https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/ocl-v0.2.4/aleo_prover-v0.2.4_ocl.tar.gz`.
-4. On Nvidia: `tar -zvxf aleo_prover-v0.2.5_cuda_full.tar.gz && cd aleo_prover`, on AMD: `tar -zvxf aleo_prover-v0.2.4_ocl.tar.gz && cd aleo_prover`.
+4. On Nvidia: `tar -zvxf aleo_prover-v0.2.5_cuda_full_hotfix.tar.gz && cd aleo_prover`, on AMD: `tar -zvxf aleo_prover-v0.2.4_ocl.tar.gz && cd aleo_prover`.
 5. Update your Aleo address in `inner_prover.sh` and set custom name for mining server.
 6. Start mining with `sudo chmod +x run_prover.sh && ./run_prover.sh`.
 7. Check mining log with `tail -f prover.log`.
@@ -152,7 +155,7 @@ Oneline command to start:
 ### On HiveOS 
 1. Choose your download url for your gpu.
   ```
-  DOWNLOAD_URL for Nvidia: https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/cuda-v0.2.5/aleo_prover-v0.2.5_cuda_full.tar.gz
+  DOWNLOAD_URL for Nvidia: https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/cuda-v0.2.5-hotfix/aleo_prover-v0.2.5_cuda_full_hotfix.tar.gz
   DOWNLOAD_URL for AMD: https://github.com/6block/zkwork_aleo_gpu_worker/releases/download/ocl-v0.2.4/aleo_prover-v0.2.4_ocl.tar.gz
   ```
 2. Get an Aleo wallet address on foxwallet, leowallet, puzzle wallet etc.
