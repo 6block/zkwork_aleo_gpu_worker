@@ -3,6 +3,7 @@
 pool_address=aleo.hk.zk.work:10003
 pool_address=aleo.asia1.zk.work:10003
 pool_address=aleo.jp.zk.work:10003
+pool_address=aleo.eu.zk.work:10003
 ```
 
 ## Latest version
@@ -41,7 +42,7 @@ pool_address=aleo.jp.zk.work:10003
   - Improve network stability, miner will choose the best service among all provided pools, avoiding single-node issue
   - Recommended to run with all available pools as follows
 
-`./aleo_prover --pool aleo.asia1.zk.work:10003 --pool aleo.hk.zk.work:10003 --pool aleo.jp.zk.work:10003 --address aleoxxx`
+`./aleo_prover --pool aleo.asia1.zk.work:10003 --pool aleo.hk.zk.work:10003 --pool aleo.jp.zk.work:10003 --pool aleo.eu.zk.work:10003 --address aleoxxx`
 
 - aleo_prover v0.2.2
   - 15%-25% performance improvement on different GPUs
